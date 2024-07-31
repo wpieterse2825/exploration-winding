@@ -1,0 +1,24 @@
+cc_binary(
+    name = "winding",
+    srcs = [
+        "main.cpp",
+    ],
+    deps = [
+        "//exploration/winding:library",
+    ],
+)
+
+cc_library(
+    name = "library",
+    srcs = [
+        "library_vector.cpp",
+        "library_winding.cpp",
+    ],
+    hdrs = [
+        "library_vector.hpp",
+        "library_winding.hpp",
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)

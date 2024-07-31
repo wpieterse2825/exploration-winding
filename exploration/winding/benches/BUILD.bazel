@@ -1,0 +1,21 @@
+cc_binary(
+    name = "plane2d_from_points",
+    srcs = [
+        "plane2d_from_points.cpp",
+    ],
+    deps = [
+        "//exploration/winding:library",
+        "@celero",
+    ],
+)
+
+cc_binary(
+    name = "plane2d_intersection",
+    srcs = [
+        "plane2d_intersection.cpp",
+    ],
+    deps = [
+        "//exploration/winding:library",
+        "@celero",
+    ],
+)

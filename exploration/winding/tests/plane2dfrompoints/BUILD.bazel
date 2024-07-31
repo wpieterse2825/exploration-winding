@@ -1,0 +1,50 @@
+cc_test(
+    name = "generic",
+    srcs = [
+        "generic.cpp",
+    ],
+    deps = [
+        "//exploration/winding/tests/plane2dfrompoints:shared",
+    ],
+)
+
+cc_test(
+    name = "optimized",
+    srcs = [
+        "optimized.cpp",
+    ],
+    deps = [
+        "//exploration/winding/tests/plane2dfrompoints:shared",
+    ],
+)
+
+cc_test(
+    name = "x86_sse_1",
+    srcs = [
+        "x86_sse_1.cpp",
+    ],
+    deps = [
+        "//exploration/winding/tests/plane2dfrompoints:shared",
+    ],
+)
+
+cc_test(
+    name = "x86_avx_1",
+    srcs = [
+        "x86_avx_1.cpp",
+    ],
+    deps = [
+        "//exploration/winding/tests/plane2dfrompoints:shared",
+    ],
+)
+
+cc_library(
+    name = "shared",
+    hdrs = [
+        "shared.hpp",
+    ],
+    deps = [
+        "//exploration/winding:library",
+        "@googletest//:gtest_main",
+    ],
+)
